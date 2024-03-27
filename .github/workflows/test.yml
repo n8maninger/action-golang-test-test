@@ -1,0 +1,23 @@
+name: Publish
+
+# Controls when the action will run. 
+on:
+  workflow_dispatch:
+  # Triggers the workflow on new SemVer tags
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+      - uses: n8maninger/actions-golang-test@fe30a449f4c73e37af6d9b4350c48479dc632c0d
+        with:
+          working-directory: ./a
