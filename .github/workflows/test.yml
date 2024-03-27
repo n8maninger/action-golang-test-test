@@ -18,6 +18,6 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: '1.21'
-      - uses: n8maninger/action-golang-test@v2
+      - uses: n8maninger/action-golang-test@ef0e294645c281baf752f60bdfb68fc6c7f286cf
         with:
           working-directory: ./a
