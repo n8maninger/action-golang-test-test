@@ -11,5 +11,5 @@ func TestA(t *testing.T) {
 
 func TestSlow(t *testing.T) {
 	t.Log("TestSlow")
-	time.Sleep(5 * time.Second)
+	time.Sleep(10 * time.Second)
 }
